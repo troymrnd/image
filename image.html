@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Photos</title>
+    
+    <style>
+        html, body {
+            height: 100%; 
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Standard Photo/Label Styles */
+        .label {
+            position: absolute;
+            color: #8d002a;
+            font-family: cursive, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+        .photo-frame {
+            position: absolute;
+            border: 4px solid #8d002a;
+            background-color: #f0f0f0; 
+            box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+            box-sizing: border-box; 
+        }
+
+        /* ⬅️ BACK BUTTON STYLES ➡️ */
+        .back-button-container {
+            /* Positioning the button in the bottom right corner */
+            position: fixed;
+            bottom: 20px;
+            right: 20px; /* Changed from 'left: 20px' to 'right: 20px' */
+            z-index: 100;
+            cursor: pointer;
+            opacity: 0.8;
+            /* Apply transition for smooth movement */
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        
+        /* Hover effect: Move up and slightly left, and become fully opaque */
+        .back-button-container:hover {
+            opacity: 1;
+            /* Moves the button 5px up and 5px left */
+            transform: translateY(-5px) translateX(-5px); 
+        }
+        
+    </style>
+</head>
+<body style="background-color: #F8D9E0; display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+
+    <div style="position: relative; width: 850px; height: 550px;">
+
+        <div class="label" style="top: 300px; left: 10px; transform: rotate(-5deg);">Your pic</div>
+        <div class="label" style="top: 150px; left: 180px; transform: rotate(15deg);">photobooth!</div> 
+        <div class="label" style="top: 50px; left: 600px; transform: rotate(5deg);">grad pic</div>
+        <div class="label" style="top: 350px; left: 500px; transform: rotate(15deg);">recent!</div>
+        
+        <div class="photo-frame" style="width: 140px; height: 100px; top: 350px; left: 50px; transform: rotate(-15deg);">
+            <img src="11.jpeg" alt="Your Photo" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        
+        <div class="photo-frame" style="width: 140px; height: 100px; top: 200px; left: 100px; transform: rotate(-10deg);">
+            <img src="10.jpeg" alt="Your Photo" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        
+        <div class="photo-frame" style="width: 140px; height: 100px; top: 100px; left: 150px; transform: rotate(10deg);">
+            <img src="5.jpeg" alt="Your Photo" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        
+        <div class="photo-frame" style="width: 140px; height: 100px; top: 150px; left: 250px; transform: rotate(5deg);">
+            <img src="13.jpg" alt="Your Photo" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+
+        <div class="photo-frame" style="width: 180px; height: 120px; top: 90px; left: 580px; transform: rotate(5deg);">
+            <img src="4.jpg" alt="Your Photo" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        
+        <div class="photo-frame" style="width: 140px; height: 100px; top: 300px; left: 550px; transform: rotate(15deg);">
+            <img src="3.jpeg" alt="Your Photo" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        
+        <div class="photo-frame" style="width: 140px; height: 100px; top: 400px; left: 630px; transform: rotate(-5deg);">
+            <img src="6.jpeg" alt="Your Photo" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+
+
+        <div style="position: absolute; top: 50px; left: 350px; transform: rotate(5deg); display: flex; flex-direction: column; gap: 5px;">
+            <div class="photo-frame" style="width: 80px; height: 120px; position: static;">
+                <img src="1.jpeg" alt="Your Photo" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="photo-frame" style="width: 80px; height: 120px; position: static;">
+                <img src="2.jpeg" alt="Your Photo" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="photo-frame" style="width: 80px; height: 120px; position: static;">
+                <img src="7.jpeg" alt="Your Photo" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+        </div>
+        
+        <div style="position: absolute; top: 100px; left: 450px; transform: rotate(-5deg); display: flex; flex-direction: column; gap: 5px;">
+             <div class="photo-frame" style="width: 80px; height: 120px; position: static;">
+                <img src="8.jpeg" alt="Your Photo" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="photo-frame" style="width: 80px; height: 120px; position: static;">
+                <img src="9.jpeg" alt="Your Photo" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="photo-frame" style="width: 80px; height: 120px; position: static;">
+                <img src="12.jpg" alt="Your Photo" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+        </div>
+
+    </div>
+    
+    <a href="javascript:history.back()" title="Go Back" class="back-button-container">
+        <img src="back.png" alt="Back Button Arrow" style="width: 50px; height: 50px; filter: drop-shadow(0 2px 2px rgba(0,0,0,0.3));">
+    </a>
+    </body>
+</html>
